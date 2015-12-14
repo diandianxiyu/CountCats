@@ -2,7 +2,11 @@
 //  AppDelegate.swift
 //  CountCats
 //
+<<<<<<< HEAD
 //  Created by 雨 on 15/12/11.
+=======
+//  Created by 李小雨 on 15/11/10.
+>>>>>>> 227f759ac825acaab0c25b244396fe38082674e0
 //  Copyright © 2015年 Lixiaoyu. All rights reserved.
 //
 
