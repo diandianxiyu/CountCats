@@ -10,6 +10,9 @@ import SpriteKit
 
 class GameScene: SKScene {
     
+    //设置这个场景中的两个按钮
+//    let btnStart : UIButton;
+    
     
     override func didMoveToView(view: SKView) {
         
@@ -38,6 +41,8 @@ class GameScene: SKScene {
         
         //开始按钮
         let btnStart=UIButton()
+        btnStart.tag=100
+        
         btnStart.frame=CGRectMake(CGRectGetMidX(self.frame) / 2 + 25,  CGRectGetMidY(self.frame) / 2 + 30,  100, 40)
         btnStart.setTitle("开始",forState: UIControlState.Normal)
         btnStart.backgroundColor=UIColor.blueColor()
@@ -45,6 +50,7 @@ class GameScene: SKScene {
         
         //捐款按钮
         let btnGift=UIButton()
+        btnGift.tag=101
         btnGift.frame=CGRectMake(CGRectGetMidX(self.frame) / 2 + 25,  CGRectGetMidY(self.frame) / 2 + 80, 100, 40)
         btnGift.setTitle("给作者捐款",forState: UIControlState.Normal)
         btnGift.backgroundColor=UIColor.blueColor()
@@ -64,8 +70,19 @@ class GameScene: SKScene {
     
     //跳转到下一个场景
     func tapped(){
-        print("tapped")
-    }
+        
+        self.view?.viewWithTag(100)?.removeFromSuperview()
+        self.view?.viewWithTag(101)?.removeFromSuperview()
+         //声明下一个场景的实例
+        let secondScene = CountDownScene(size: self.size)
+        //场景过渡动画
+        let doors = SKTransition.flipVerticalWithDuration(0.1)
+        //带动画的场景跳转
+        //跳转之前，删除两个按钮，因为按钮并不属于场景里面
+        
+        self.view?.presentScene(secondScene,transition:doors)
+        
+}
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
        /* Called when a touch begins */
@@ -98,4 +115,7 @@ class GameScene: SKScene {
     override func update(currentTime: CFTimeInterval) {
         /* Called before each frame is rendered */
     }
+    
+    
+    
 }
