@@ -56,16 +56,15 @@ class GameScene: SKScene {
         labUrl.fontSize=15;
         labUrl.position=CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - 280 )
         self.addChild(labUrl)
-
+     
+        btnStart.addTarget(self,action:Selector("tapped"),forControlEvents:.TouchUpInside)
         
     
-        
-        
-        
-        
-        
-        
+    }
     
+    //跳转到下一个场景
+    func tapped(){
+        print("tapped")
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
