@@ -9,14 +9,63 @@
 import SpriteKit
 
 class GameScene: SKScene {
+    
+    
     override func didMoveToView(view: SKView) {
-        /* Setup your scene here */
-        let myLabel = SKLabelNode(fontNamed:"Chalkduster")
-        myLabel.text = "Hello, World!"
-        myLabel.fontSize = 45
-        myLabel.position = CGPoint(x:CGRectGetMidX(self.frame), y:CGRectGetMidY(self.frame))
         
-        self.addChild(myLabel)
+        
+        //初始化开始界面
+        let labTitle=SKLabelNode(fontNamed: "Chalkduster")
+        labTitle.text="数猫猫";
+        labTitle.fontSize=80;
+        labTitle.position=CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)+95)
+        self.addChild(labTitle)
+        
+        //副标题
+        let labSubTitle=SKLabelNode(fontNamed: "Chalkduster")
+        labSubTitle.text="CountCats";
+        labSubTitle.fontSize=35;
+        labSubTitle.position=CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)+40)
+        self.addChild(labSubTitle)
+        
+        //文字说明
+        let labSubTitle2=SKLabelNode(fontNamed: "Chalkduster")
+        labSubTitle2.text="会有一大波猫猫路过，快来快来数一数，到底多少只~";
+        labSubTitle2.fontSize=20;
+        labSubTitle2.position=CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame)+10)
+        self.addChild(labSubTitle2)
+        
+        
+        //开始按钮
+        let btnStart=UIButton()
+        btnStart.frame=CGRectMake(CGRectGetMidX(self.frame) / 2 + 25,  CGRectGetMidY(self.frame) / 2 + 30,  100, 40)
+        btnStart.setTitle("开始",forState: UIControlState.Normal)
+        btnStart.backgroundColor=UIColor.blueColor()
+        self.view?.addSubview(btnStart)
+        
+        //捐款按钮
+        let btnGift=UIButton()
+        btnGift.frame=CGRectMake(CGRectGetMidX(self.frame) / 2 + 25,  CGRectGetMidY(self.frame) / 2 + 80, 100, 40)
+        btnGift.setTitle("给作者捐款",forState: UIControlState.Normal)
+        btnGift.backgroundColor=UIColor.blueColor()
+        self.view?.addSubview(btnGift)
+
+        //底部的地址
+        let labUrl=SKLabelNode(fontNamed:"Arial")
+        labUrl.text="CoderFix.cn";
+        labUrl.fontSize=15;
+        labUrl.position=CGPoint(x: CGRectGetMidX(self.frame), y: CGRectGetMidY(self.frame) - 280 )
+        self.addChild(labUrl)
+
+        
+    
+        
+        
+        
+        
+        
+        
+    
     }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
@@ -27,13 +76,21 @@ class GameScene: SKScene {
             
             let sprite = SKSpriteNode(imageNamed:"Spaceship")
             
-            sprite.xScale = 0.5
+            sprite.xScale = 0.5;
             sprite.yScale = 0.5
             sprite.position = location
             
-            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
             
-            sprite.runAction(SKAction.repeatActionForever(action))
+            print(location)
+            
+//            let action = SKAction.rotateByAngle(CGFloat(M_PI), duration:1)
+            
+            let a2=SKAction.moveToY(200, duration: 2)
+            sprite.runAction(SKAction.repeatActionForever(a2))
+            sprite.physicsBody=SKPhysicsBody(circleOfRadius: 60)
+            sprite.physicsBody?.usesPreciseCollisionDetection=true
+            
+            
             
             self.addChild(sprite)
         }

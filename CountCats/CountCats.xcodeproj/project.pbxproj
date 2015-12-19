@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A6BAE411C253F8A00345E26 /* CountDownScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A6BAE401C253F8A00345E26 /* CountDownScene.swift */; };
 		9AEDAAE71C24FDBC009BE1DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDAAE61C24FDBC009BE1DC /* AppDelegate.swift */; };
 		9AEDAAE91C24FDBC009BE1DC /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 9AEDAAE81C24FDBC009BE1DC /* GameScene.sks */; };
 		9AEDAAEB1C24FDBC009BE1DC /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AEDAAEA1C24FDBC009BE1DC /* GameScene.swift */; };
@@ -36,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9A6BAE401C253F8A00345E26 /* CountDownScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownScene.swift; sourceTree = "<group>"; };
 		9AEDAAE31C24FDBC009BE1DC /* CountCats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CountCats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9AEDAAE61C24FDBC009BE1DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9AEDAAE81C24FDBC009BE1DC /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -109,6 +111,7 @@
 				9AEDAAF11C24FDBC009BE1DC /* Assets.xcassets */,
 				9AEDAAF31C24FDBC009BE1DC /* LaunchScreen.storyboard */,
 				9AEDAAF61C24FDBC009BE1DC /* Info.plist */,
+				9A6BAE401C253F8A00345E26 /* CountDownScene.swift */,
 			);
 			path = CountCats;
 			sourceTree = "<group>";
@@ -268,6 +271,7 @@
 			files = (
 				9AEDAAEB1C24FDBC009BE1DC /* GameScene.swift in Sources */,
 				9AEDAAED1C24FDBC009BE1DC /* GameViewController.swift in Sources */,
+				9A6BAE411C253F8A00345E26 /* CountDownScene.swift in Sources */,
 				9AEDAAE71C24FDBC009BE1DC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -495,6 +499,7 @@
 				9AEDAB111C24FDBC009BE1DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AEDAB121C24FDBC009BE1DC /* Build configuration list for PBXNativeTarget "CountCatsTests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +508,7 @@
 				9AEDAB141C24FDBC009BE1DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9AEDAB151C24FDBC009BE1DC /* Build configuration list for PBXNativeTarget "CountCatsUITests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +517,7 @@
 				9AEDAB171C24FDBC009BE1DC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
