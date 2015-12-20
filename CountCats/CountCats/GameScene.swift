@@ -42,7 +42,6 @@ class GameScene: SKScene {
         //开始按钮
         let btnStart=UIButton()
         btnStart.tag=100
-        
         btnStart.frame=CGRectMake(CGRectGetMidX(self.frame) / 2 + 25,  CGRectGetMidY(self.frame) / 2 + 30,  100, 40)
         btnStart.setTitle("开始",forState: UIControlState.Normal)
         btnStart.backgroundColor=UIColor.blueColor()
@@ -81,7 +80,6 @@ class GameScene: SKScene {
         //跳转之前，删除两个按钮，因为按钮并不属于场景里面
         
         self.view?.presentScene(secondScene,transition:doors)
-        
 }
     
     override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
